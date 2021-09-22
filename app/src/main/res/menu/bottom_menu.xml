@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="DrunkTest"
+        android:icon="@drawable/home_main"
+        android:id="@+id/Durnktest_screen"/>
+
+    <item android:title="Profile"
+        android:icon="@drawable/person_main"
+        android:id="@+id/Profile_screen"/>
+
+    <item android:title="Settings"
+        android:icon="@drawable/settings_main"
+        android:id="@+id/settings_screen"/>
+</menu>
