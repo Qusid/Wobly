@@ -6,17 +6,16 @@
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/drawable/home_main.xml" value="0.403125" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/layout/activity_reaction_test.xml" value="0.32608695652173914" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/layout/fragment_drunktest.xml" value="0.3759057971014493" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/layout/fragment_middle.xml" value="0.3759057971014493" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/layout/fragment_settings.xml" value="0.3759057971014493" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/menu/bottom_menu.xml" value="0.21875" />
         <entry key="..\:/Users/siddh/AndroidStudioProjects/DrunkApp/app/src/main/res/xml/root_preferences.xml" value="0.21875" />
-        <entry key="..\:/Users/Android/DrunkApp/app/src/main/res/layout/activity_main.xml" value="0.11354166666666667" />
-        <entry key="..\:/Users/Android/DrunkApp/app/src/main/res/layout/activity_reaction_test.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
