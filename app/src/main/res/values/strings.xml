@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DrunkApp</string>
+    <string name="react_desc">Click the white box as soon as it turns green</string>
 </resources>
