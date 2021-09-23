@@ -8,7 +8,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.content.Intent
 import android.view.View
 
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
