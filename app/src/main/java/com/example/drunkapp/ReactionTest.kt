@@ -21,7 +21,7 @@ class ReactionTest : AppCompatActivity() {
         var colorbox = findViewById(R.id.colorbutton) as Button
         var textview = findViewById(R.id.reactiontext) as TextView
         var color = "purple"
-        val tim = Random.nextLong(3500, 7000)
+        val tim = Random.nextLong(5000, 8000)
         //Thread.sleep(tim)
         var handler = Handler()
         handler.postDelayed({
