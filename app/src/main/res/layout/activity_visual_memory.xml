@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="SetupSel"
+    tools:context=".VisualMemory">
+
+    <ImageView
+        android:id="@+id/sel2"
+        android:layout_width="108dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:onClick="SetupSel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sel5"
+        app:layout_constraintEnd_toStartOf="@+id/sel3"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/sel1"
+        app:srcCompat="@drawable/blank" />
+
+    <ImageView
+        android:id="@+id/sel6"
+        android:layout_width="108dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="132dp"
+        android:clickable="true"
+        android:onClick="SetupSel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/blank" />
+
+    <ImageView
+        android:id="@+id/sel4"
+        android:layout_width="108dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="132dp"
+        android:clickable="true"
+        android:onClick="SetupSel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blank" />
+
+    <ImageView
+        android:id="@+id/sel3"
+        android:layout_width="108dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:onClick="SetupSel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sel6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/blank" />
+
+    <ImageView
+        android:id="@+id/sel1"
+        android:layout_width="108dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:onClick="SetupSel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sel4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blank" />
+
+    <ImageView
+        android:id="@+id/sel5"
+        android:layout_width="108dp"
+        android:layout_height="103dp"
+        android:layout_marginBottom="132dp"
+        android:clickable="true"
+        android:onClick="SetupSel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sel6"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toEndOf="@+id/sel4"
+        app:srcCompat="@drawable/blank" />
+
+    <ImageView
+        android:id="@+id/ThirdImage"
+        android:layout_width="106dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/thirdimage"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Secondimage"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/blank" />
+
+    <ImageView
+        android:id="@+id/Secondimage"
+        android:layout_width="106dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/secondimage"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/ThirdImage"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toEndOf="@+id/FirstImage"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/blank" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Visual_memory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/visual_memory_explination"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/FirstImage"
+        android:layout_width="106dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:contentDescription="@string/firstimage"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/Secondimage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/blank" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_images"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sel2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Secondimage" />
+
+    <TextView
+        android:id="@+id/results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/Secondimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
