@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScreenTapTest">
+
+    <TextView
+        android:id="@+id/screentaptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_desc"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bluebutton"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#3232FF"
+        android:text="@string/color_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/greenbutton"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/redbutton"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#FF3232"
+        android:text="@string/color_red"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/yellowbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screentaptext"
+        app:layout_constraintVertical_bias="0.353" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/greenbutton"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#32FF32"
+        android:text="@string/color_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/yellowbutton"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="#FFC107"
+        android:text="@string/color_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screentaptext"
+        app:layout_constraintVertical_bias="0.564" />
+</androidx.constraintlayout.widget.ConstraintLayout>

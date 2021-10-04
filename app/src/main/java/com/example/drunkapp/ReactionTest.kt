@@ -48,6 +48,11 @@ class ReactionTest : AppCompatActivity() {
                 colorbox.setText("$reaction ms")
                 colorbox.setTextColor(R.color.black)
                 color = "white"
+                handler.postDelayed({
+                    val intent = Intent(this, ScreenTapTest::class.java)
+                    startActivity(intent)
+                }, 2000)
+
             }
         }
     }
