@@ -1,5 +1,6 @@
 package com.example.drunkapp
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import androidx.core.view.ViewCompat.setBackgroundTintList
 import kotlin.random.Random
 
 class ReactionTest : AppCompatActivity() {
+    @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reaction_test)

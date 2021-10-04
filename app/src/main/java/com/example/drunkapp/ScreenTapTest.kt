@@ -1,5 +1,6 @@
 package com.example.drunkapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -161,5 +162,9 @@ class ScreenTapTest : AppCompatActivity() {
             greencircle.setOnClickListener(null)
             bluecircle.setOnClickListener(null)
                             }, 15000)
+        handler.postDelayed({
+            val intent = Intent(this, VisualMemory::class.java)
+            startActivity(intent)
+        }, 16000)
     }
 }

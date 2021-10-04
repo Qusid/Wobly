@@ -13,6 +13,9 @@
             android:name=".ScreenTapTest"
             android:exported="true" />
         <activity
+            android:name=".VisualMemory"
+            android:exported="true" />
+        <activity
             android:name=".ReactionTest"
             android:exported="true" />
         <activity
