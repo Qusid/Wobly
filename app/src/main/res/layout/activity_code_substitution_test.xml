@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CodeSubstitutionTest">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        app:layout_constraintStart_toEndOf="@+id/code4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button12"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/six"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/code6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button13"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/three"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button20"
+        app:layout_constraintTop_toBottomOf="@+id/code3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button14"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/five"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button21"
+        app:layout_constraintTop_toBottomOf="@+id/code5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button15"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/seven"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/code7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button16"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/eight"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button15"
+        app:layout_constraintTop_toBottomOf="@+id/code8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button17"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="116dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/zero"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code0"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button18"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/one"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/code1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button21"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/four"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/code4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button20"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/two"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/button18"
+        app:layout_constraintTop_toBottomOf="@+id/code2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code8"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/code7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/code5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/code2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/code1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/code0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/code3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code7"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/code6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/code9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/space"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/code8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button19"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:clickable="false"
+        android:text="@string/nine"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button16"
+        app:layout_constraintTop_toBottomOf="@+id/code9" />
+
+    <TextView
+        android:id="@+id/codetext"
+        android:layout_width="75dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="224dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/num2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num2"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="316dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/two"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num0"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/zero"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num8"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num1"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="316dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/one"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num7"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/seven"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num8"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num4"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num4"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/four"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/num5"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num5"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/five"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num8"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/eight"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num6"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/six"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toEndOf="@+id/num5"
+        app:layout_constraintTop_toBottomOf="@+id/num3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num3"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="316dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/three"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toEndOf="@+id/num2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/num9"
+        android:layout_width="60dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="@string/nine"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toEndOf="@+id/num8"
+        app:layout_constraintTop_toBottomOf="@+id/num6"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <TextView
+        android:id="@+id/codesubsidesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="@string/codesubstitutiontext"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
