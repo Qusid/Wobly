@@ -1,6 +1,7 @@
 package com.example.drunkapp
 
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -12,17 +13,10 @@ import kotlin.random.Random
 import android.view.View
 import android.widget.TextView
 import androidx.core.view.isVisible
-
-
-
-
-
-
-
-
-
-
-
+import android.os.CountDownTimer
+import androidx.core.graphics.toColorInt
+import java.text.DecimalFormat
+import java.text.NumberFormat
 
 
 class VisualMemory : AppCompatActivity() {
@@ -36,6 +30,28 @@ class VisualMemory : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visual_memory)
+        val timer = findViewById<View>(R.id.Timer) as TextView
+
+        object : CountDownTimer(20000, 1000) {
+            @SuppressLint("SetTextI18n")
+            override fun onTick(millisUntilFinished: Long) {
+                // Used for formatting digit to be in 2 digits only
+                val f: NumberFormat = DecimalFormat("00")
+                val hour = millisUntilFinished / 3600000 % 24
+                val min = millisUntilFinished / 60000 % 60
+                val sec = millisUntilFinished / 1000 % 60
+                timer.setText(
+                    f.format(sec)
+
+                )
+
+            }
+
+            // When the task is over it will print 00:00:00 there
+            override fun onFinish() {
+                timer.setText("00:00:00")
+            }
+        }.start()
 
         var imgone = 2000.toLong()
         var imgtwo = 3000.toLong()

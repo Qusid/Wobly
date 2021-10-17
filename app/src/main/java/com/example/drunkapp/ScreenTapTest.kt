@@ -1,18 +1,47 @@
 package com.example.drunkapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import java.text.DecimalFormat
+import java.text.NumberFormat
 import kotlin.random.Random
 
 class ScreenTapTest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_screen_tap_test)
+
+        val timer = findViewById<View>(R.id.TimerScreentap) as TextView
+
+        object : CountDownTimer(20000, 1000) {
+            @SuppressLint("SetTextI18n")
+            override fun onTick(millisUntilFinished: Long) {
+                // Used for formatting digit to be in 2 digits only
+                val f: NumberFormat = DecimalFormat("00")
+                val hour = millisUntilFinished / 3600000 % 24
+                val min = millisUntilFinished / 60000 % 60
+                val sec = millisUntilFinished / 1000 % 60
+                timer.setText(
+                    f.format(sec)
+
+                )
+
+            }
+
+            // When the task is over it will print 00:00:00 there
+            override fun onFinish() {
+                timer.setText("00:00:00")
+            }
+        }.start()
+
         var redcircle = findViewById(R.id.redbutton) as Button
         var bluecircle = findViewById(R.id.bluebutton) as Button
         var greencircle = findViewById(R.id.greenbutton) as Button

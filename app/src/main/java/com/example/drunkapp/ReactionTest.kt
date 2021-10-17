@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.view.MotionEvent
 import android.view.View
@@ -12,6 +13,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat.setBackgroundTintList
+import java.text.DecimalFormat
+import java.text.NumberFormat
 import kotlin.random.Random
 
 class ReactionTest : AppCompatActivity() {
@@ -19,6 +22,30 @@ class ReactionTest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reaction_test)
+
+        val timer = findViewById<View>(R.id.TimerReaction) as TextView
+
+        object : CountDownTimer(20000, 1000) {
+            @SuppressLint("SetTextI18n")
+            override fun onTick(millisUntilFinished: Long) {
+                // Used for formatting digit to be in 2 digits only
+                val f: NumberFormat = DecimalFormat("00")
+                val hour = millisUntilFinished / 3600000 % 24
+                val min = millisUntilFinished / 60000 % 60
+                val sec = millisUntilFinished / 1000 % 60
+                timer.setText(
+                    f.format(sec)
+
+                )
+
+            }
+
+            // When the task is over it will print 00:00:00 there
+            override fun onFinish() {
+                timer.setText("00:00:00")
+            }
+        }.start()
+
         var starttime: Long = 0
         var colorbox = findViewById(R.id.colorbutton) as Button
         var textview = findViewById(R.id.reactiontext) as TextView
