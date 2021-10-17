@@ -26,19 +26,15 @@ class ScreenTapTest : AppCompatActivity() {
                 when (color) {
                     0 -> {
                         textview.setText("Tap Red")
-                        textview.setTextColor(getResources().getColor(R.color.red))
                     }
                     1 -> {
                         textview.setText("Tap Blue")
-                        textview.setTextColor(getResources().getColor(R.color.blue))
                     }
                     2 -> {
                         textview.setText("Tap Green")
-                        textview.setTextColor(getResources().getColor(R.color.green))
                     }
                     3 -> {
                         textview.setText("Tap Yellow")
-                        textview.setTextColor(getResources().getColor(R.color.yellow))
                     }
                 }
                 redcircle.setOnClickListener {
@@ -50,19 +46,15 @@ class ScreenTapTest : AppCompatActivity() {
                         when (color) {
                             0 -> {
                                 textview.setText("Tap Red")
-                                textview.setTextColor(resources.getColor(R.color.red))
                             }
                             1 -> {
                                 textview.setText("Tap Blue")
-                                textview.setTextColor(resources.getColor(R.color.blue))
                             }
                             2 -> {
                                 textview.setText("Tap Green")
-                                textview.setTextColor(resources.getColor(R.color.green))
                             }
                             3 -> {
                                 textview.setText("Tap Yellow")
-                                textview.setTextColor(resources.getColor(R.color.yellow))
                             }
                         }
                     }
@@ -78,19 +70,15 @@ class ScreenTapTest : AppCompatActivity() {
                         when (color) {
                             0 -> {
                                 textview.setText("Tap Red")
-                                textview.setTextColor(resources.getColor(R.color.red))
                             }
                             1 -> {
                                 textview.setText("Tap Blue")
-                                textview.setTextColor(resources.getColor(R.color.blue))
                             }
                             2 -> {
                                 textview.setText("Tap Green")
-                                textview.setTextColor(resources.getColor(R.color.green))
                             }
                             3 -> {
                                 textview.setText("Tap Yellow")
-                                textview.setTextColor(resources.getColor(R.color.yellow))
                             }
                         }
                     }
@@ -106,19 +94,15 @@ class ScreenTapTest : AppCompatActivity() {
                         when (color) {
                             0 -> {
                                 textview.setText("Tap Red")
-                                textview.setTextColor(resources.getColor(R.color.red))
                             }
                             1 -> {
                                 textview.setText("Tap Blue")
-                                textview.setTextColor(resources.getColor(R.color.blue))
                             }
                             2 -> {
                                 textview.setText("Tap Green")
-                                textview.setTextColor(resources.getColor(R.color.green))
                             }
                             3 -> {
                                 textview.setText("Tap Yellow")
-                                textview.setTextColor(resources.getColor(R.color.yellow))
                             }
                         }
                     }
@@ -134,19 +118,15 @@ class ScreenTapTest : AppCompatActivity() {
                         when (color) {
                             0 -> {
                                 textview.setText("Tap Red")
-                                textview.setTextColor(resources.getColor(R.color.red))
                             }
                             1 -> {
                                 textview.setText("Tap Blue")
-                                textview.setTextColor(resources.getColor(R.color.blue))
                             }
                             2 -> {
                                 textview.setText("Tap Green")
-                                textview.setTextColor(resources.getColor(R.color.green))
                         }
                             3 -> {
                                 textview.setText("Tap Yellow")
-                                textview.setTextColor(resources.getColor(R.color.yellow))
                             }
                         }
                     }
@@ -164,7 +144,7 @@ class ScreenTapTest : AppCompatActivity() {
             bluecircle.setOnClickListener(null)
                             }, 15000)
         handler.postDelayed({
-            val intent = Intent(this, VisualMemory::class.java)
+            val intent = Intent(this, CodeSubstitutionTest::class.java)
             startActivity(intent)
         }, 16000)
     }
