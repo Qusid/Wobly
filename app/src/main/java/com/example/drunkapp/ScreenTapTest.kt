@@ -173,7 +173,7 @@ class ScreenTapTest : AppCompatActivity() {
             bluecircle.setOnClickListener(null)
                             }, 15000)
         handler.postDelayed({
-            val intent = Intent(this, CodeSubstitutionTest::class.java)
+            val intent = Intent(this, VisualMemory::class.java)
             startActivity(intent)
         }, 16000)
     }

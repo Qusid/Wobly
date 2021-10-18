@@ -2,6 +2,7 @@ package com.example.drunkapp
 
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -72,6 +73,8 @@ class VisualMemory : AppCompatActivity() {
         val imgsel5 = findViewById<View>(R.id.sel5) as ImageView
         val imgsel6 = findViewById<View>(R.id.sel6) as ImageView
 
+
+
         var photos = intArrayOf(R.drawable.cows, R.drawable.dog, R.drawable.lion, R.drawable.roo, R.drawable.fish, R.drawable.tur, R.drawable.blank)
         handler.postDelayed({
 
@@ -112,9 +115,14 @@ class VisualMemory : AppCompatActivity() {
 
 
         }, imgsel)
+        handler.postDelayed({
+            val intent = Intent(this, CodeSubstitutionTest::class.java)
+            startActivity(intent)
+        }, 16000)
 
 
     }
+
 
 
     fun SetupSel(view: View?) {
@@ -304,6 +312,7 @@ class VisualMemory : AppCompatActivity() {
                 }
                 //Log.i(TAG, "tur $newarray")
             }
+
 
 
         }
