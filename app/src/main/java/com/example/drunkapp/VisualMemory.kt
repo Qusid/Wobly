@@ -27,10 +27,22 @@ class VisualMemory : AppCompatActivity() {
     var  newarray = List(3) { Random.nextInt(0, 5) }.toMutableList()
     private val TAG = "MyActivity"
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visual_memory)
+        for(i in 0..9) {
+            if (tim.size != tim.distinct().count()) {
+                tim = List(3) { Random.nextInt(0, 6) }
+            }
+            else{
+                break
+            }
+        }
+
+
         val timer = findViewById<View>(R.id.Timer) as TextView
 
         object : CountDownTimer(20000, 1000) {
@@ -58,7 +70,6 @@ class VisualMemory : AppCompatActivity() {
         var imgtwo = 3000.toLong()
         var imgthe = 4000.toLong()
         var imgsel = 6000.toLong()
-        Log.i(TAG, "MyClass.getView() — get item number $tim")
 
         var handler = Handler()
         val img1 = findViewById<View>(R.id.FirstImage) as ImageView
@@ -100,12 +111,6 @@ class VisualMemory : AppCompatActivity() {
             text1.isVisible = false
             text2.isVisible = true
 
-            imgsel1.setImageResource(R.drawable.cows)
-            imgsel2.setImageResource(R.drawable.dog)
-            imgsel3.setImageResource(R.drawable.lion)
-            imgsel4.setImageResource(R.drawable.roo)
-            imgsel5.setImageResource(R.drawable.fish)
-            imgsel6.setImageResource(R.drawable.tur)
             imgsel1.isVisible = true
             imgsel2.isVisible = true
             imgsel3.isVisible = true
@@ -131,7 +136,7 @@ class VisualMemory : AppCompatActivity() {
         val img2 = findViewById<View>(R.id.Secondimage) as ImageView
         val img3 = findViewById<View>(R.id.ThirdImage) as ImageView
         val textView: TextView = findViewById<TextView>(R.id.results)
-
+        val intent = Intent(this, CodeSubstitutionTest::class.java)
 
         when (view?.getId()) {
 
@@ -156,11 +161,16 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        startActivity(intent)
                     }
                     else{
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
+                        img1.isVisible = false
+                        img2.isVisible = false
+                        img3.isVisible = false
+                        textView.isVisible = false
                     }
                     //Log.i(TAG, "cow $newarray")
                 }
@@ -188,11 +198,16 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        startActivity(intent)
                     }
                     else{
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
+                        img1.isVisible = false
+                        img2.isVisible = false
+                        img3.isVisible = false
+                        textView.isVisible = false
                     }
                 }
                 //Log.i(TAG, "dog $newarray")
@@ -217,11 +232,16 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        startActivity(intent)
                     }
                     else{
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
+                        img1.isVisible = false
+                        img2.isVisible = false
+                        img3.isVisible = false
+                        textView.isVisible = false
                     }
                 }
 
@@ -246,11 +266,16 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        startActivity(intent)
                     }
                     else{
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
+                        img1.isVisible = false
+                        img2.isVisible = false
+                        img3.isVisible = false
+                        textView.isVisible = false
                     }
                 }
                // Log.i(TAG, "roo $newarray")
@@ -274,11 +299,16 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        startActivity(intent)
                     }
                     else{
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
+                        img1.isVisible = false
+                        img2.isVisible = false
+                        img3.isVisible = false
+                        textView.isVisible = false
                     }
                 }
 
@@ -303,11 +333,18 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+
+                        startActivity(intent)
                     }
                     else{
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
+                        img1.isVisible = false
+                        img2.isVisible = false
+                        img3.isVisible = false
+                        textView.isVisible = false
+
                     }
                 }
                 //Log.i(TAG, "tur $newarray")
