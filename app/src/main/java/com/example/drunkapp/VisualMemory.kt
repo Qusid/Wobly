@@ -27,7 +27,7 @@ class VisualMemory : AppCompatActivity() {
     var  tim = List(3) { Random.nextInt(0, 6) }
     var  newarray = List(3) { Random.nextInt(0, 5) }.toMutableList()
     private val TAG = "MyActivity"
-
+    var flag = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -122,12 +122,14 @@ class VisualMemory : AppCompatActivity() {
 
         }, imgsel)
         handler.postDelayed({
-            val intent = Intent(this, CodeSubstitutionTest::class.java)
-            val b = getIntent().extras
-            if (b != null) {
-                intent.putExtras(b)
+            if(flag == false) {
+                val intent = Intent(this, CodeSubstitutionTest::class.java)
+                val b = getIntent().extras
+                if (b != null) {
+                    intent.putExtras(b)
+                }
+                startActivity(intent)
             }
-            startActivity(intent)
         }, 16000)
 
 
@@ -142,6 +144,10 @@ class VisualMemory : AppCompatActivity() {
         val img3 = findViewById<View>(R.id.ThirdImage) as ImageView
         val textView: TextView = findViewById<TextView>(R.id.results)
         val intent = Intent(this, CodeSubstitutionTest::class.java)
+        val b = getIntent().extras
+        if (b != null) {
+            intent.putExtras(b)
+        }
 
         when (view?.getId()) {
 
@@ -166,6 +172,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        flag = true
                         startActivity(intent)
                     }
                     else{
@@ -203,6 +210,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        flag = true
                         startActivity(intent)
                     }
                     else{
@@ -237,6 +245,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        flag = true
                         startActivity(intent)
                     }
                     else{
@@ -271,6 +280,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        flag = true
                         startActivity(intent)
                     }
                     else{
@@ -304,6 +314,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
+                        flag = true
                         startActivity(intent)
                     }
                     else{
@@ -338,7 +349,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
-
+                        flag = true
                         startActivity(intent)
                     }
                     else{
