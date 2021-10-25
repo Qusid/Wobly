@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrunkApp">
         <activity
+            android:name=".GaitTest"
+            android:exported="true" />
+        <activity
+            android:name=".Results"
+            android:exported="true" />
+        <activity
             android:name=".CodeSubstitutionTest"
             android:exported="true" />
         <activity

@@ -9,6 +9,7 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import java.text.DecimalFormat
 import java.text.NumberFormat
 import kotlin.random.Random
@@ -17,7 +18,7 @@ class CodeSubstitutionTest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_code_substitution_test)
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         val timer = findViewById<View>(R.id.timerSub) as TextView
 
         object : CountDownTimer(20000, 1000) {
@@ -186,7 +187,15 @@ class CodeSubstitutionTest : AppCompatActivity() {
             num9.setOnClickListener(null)
             val accuracy = (correct * 100 / 10)
             text.setText("Correct = $accuracy%")
+            val intent = Intent(this, Results::class.java)
+            val b = getIntent().extras
+            if (b != null) {
+                intent.putExtras(b)
+            }
+            intent.putExtra("substitutioncorrect", correct)
+            intent.putExtra("substitutionaccuracy", accuracy)
             text.setTextSize(14F)
+            startActivity(intent)
         }, 20000)
     }
 }

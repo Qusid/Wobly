@@ -11,6 +11,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat.setBackgroundTintList
 import java.text.DecimalFormat
@@ -22,10 +23,10 @@ class ReactionTest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reaction_test)
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         val timer = findViewById<View>(R.id.TimerReaction) as TextView
 
-        object : CountDownTimer(20000, 1000) {
+        object : CountDownTimer(10000, 1000) {
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
                 // Used for formatting digit to be in 2 digits only
@@ -79,6 +80,7 @@ class ReactionTest : AppCompatActivity() {
                 color = "white"
                 handler.postDelayed({
                     val intent = Intent(this, ScreenTapTest::class.java)
+                    intent.putExtra("reaction", reaction)
                     startActivity(intent)
                 }, 2000)
 

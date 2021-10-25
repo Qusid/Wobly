@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dcohol</string>
+    <string name="app_name">ImpairCheck</string>
     <string name="ImageDescription">remove error</string>
     <string name="Taketest">Take test</string>
     <!-- Preference Titles -->
@@ -20,7 +20,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="react_desc">Tap the purple box as soon as it turns green</string>
     <string name="Visual_memory">Visual Memory</string>
-    <string name="visual_memory_explination">Please memorise the animals below In the order</string>
+    <string name="visual_memory_explination">Please memorise the animals below in the order</string>
     <string name="secondimage">Secondimage</string>
     <string name="thirdimage">ThirdImage</string>
     <string name="firstimage">FirstImage</string>
@@ -44,4 +44,9 @@
     <string name="nine">9</string>
     <string name="zero">0</string>
     <string name="codesubstitutiontext">Tap the number on they keypad corresponding to the letter displayed.</string>
+    <string name="reactiontest">Reaction Test</string>
+    <string name="screentaptest">Screen Tap Test</string>
+    <string name="codesubstitution">Code Substitution Test</string>
+    <string name="result">Results</string>
+    <string name="walktest">Walking Test</string>
 </resources>
