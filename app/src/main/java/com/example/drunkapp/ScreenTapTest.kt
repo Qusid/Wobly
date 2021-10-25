@@ -9,6 +9,7 @@ import android.os.Handler
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import java.text.DecimalFormat
 import java.text.NumberFormat
@@ -18,10 +19,10 @@ class ScreenTapTest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_screen_tap_test)
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         val timer = findViewById<View>(R.id.TimerScreentap) as TextView
 
-        object : CountDownTimer(20000, 1000) {
+        object : CountDownTimer(16000, 1000) {
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
                 // Used for formatting digit to be in 2 digits only
@@ -48,6 +49,7 @@ class ScreenTapTest : AppCompatActivity() {
         var yellowcircle = findViewById(R.id.yellowbutton) as Button
         var textview = findViewById(R.id.screentaptext) as TextView
         var correct = 0
+        var accuracy = 0
         var taps = 0
         var handler = Handler()
         handler.postDelayed({
@@ -164,7 +166,7 @@ class ScreenTapTest : AppCompatActivity() {
             }
         }, 5000)
         handler.postDelayed({
-            val accuracy = (correct * 100/taps)
+            accuracy = (correct * 100/taps)
             textview.setText("Correct Taps: $correct   Accuracry: $accuracy%")
             textview.setTextColor(resources.getColor(R.color.black))
             yellowcircle.setOnClickListener(null)
@@ -174,6 +176,12 @@ class ScreenTapTest : AppCompatActivity() {
                             }, 15000)
         handler.postDelayed({
             val intent = Intent(this, VisualMemory::class.java)
+            val b = getIntent().extras
+            if (b != null) {
+                intent.putExtras(b)
+            }
+            intent.putExtra("screentapcorrect", correct)
+            intent.putExtra("screentapaccuracy", accuracy)
             startActivity(intent)
         }, 16000)
     }

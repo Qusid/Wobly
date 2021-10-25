@@ -7,11 +7,13 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.content.Intent
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
     }
     override fun onStart() {
@@ -28,6 +30,11 @@ class MainActivity : AppCompatActivity() {
 
     fun ReactionTestIntent(view: View?) {
         val intent = Intent(this, ReactionTest::class.java)
+        startActivity(intent)
+    }
+
+    fun GaitTestIntent(view: View?){
+        val intent = Intent(this, GaitTest::class.java)
         startActivity(intent)
     }
 

@@ -15,6 +15,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.view.isVisible
 import android.os.CountDownTimer
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.graphics.toColorInt
 import java.text.DecimalFormat
 import java.text.NumberFormat
@@ -32,7 +33,7 @@ class VisualMemory : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visual_memory)
         val timer = findViewById<View>(R.id.Timer) as TextView
-
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         object : CountDownTimer(20000, 1000) {
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
@@ -117,6 +118,10 @@ class VisualMemory : AppCompatActivity() {
         }, imgsel)
         handler.postDelayed({
             val intent = Intent(this, CodeSubstitutionTest::class.java)
+            val b = getIntent().extras
+            if (b != null) {
+                intent.putExtras(b)
+            }
             startActivity(intent)
         }, 16000)
 
