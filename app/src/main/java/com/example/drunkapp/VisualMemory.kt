@@ -338,7 +338,7 @@ class VisualMemory : AppCompatActivity() {
                 }
                 else if(!(img2.isVisible)){
                     img2.setImageResource(R.drawable.tur)
-                    img1.isVisible = true
+                    img2.isVisible = true
                     newarray[1] = 5
                 }
                 else {

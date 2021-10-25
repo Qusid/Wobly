@@ -80,6 +80,10 @@ class ReactionTest : AppCompatActivity() {
                 color = "white"
                 handler.postDelayed({
                     val intent = Intent(this, ScreenTapTest::class.java)
+                    val b = getIntent().extras
+                    if (b != null) {
+                        intent.putExtras(b)
+                    }
                     intent.putExtra("reaction", reaction)
                     startActivity(intent)
                 }, 2000)

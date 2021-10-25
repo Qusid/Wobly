@@ -30,11 +30,28 @@ class MainActivity : AppCompatActivity() {
 
     fun ReactionTestIntent(view: View?) {
         val intent = Intent(this, ReactionTest::class.java)
+        intent.putExtra("TestType", "Impair")
+        startActivity(intent)
+    }
+
+    fun SetupReactionTestIntent(view: View?) {
+        val intent = Intent(this, ReactionTest::class.java)
+        intent.putExtra("TestType", "setup")
         startActivity(intent)
     }
 
     fun GaitTestIntent(view: View?){
         val intent = Intent(this, GaitTest::class.java)
+        startActivity(intent)
+    }
+
+    fun UserTestIntent(view: View?) {
+        val intent = Intent(this, UserSetUp::class.java)
+        startActivity(intent)
+    }
+
+    fun UserHistoryIntent(view: View?) {
+        val intent = Intent(this, UserHistory::class.java)
         startActivity(intent)
     }
 
