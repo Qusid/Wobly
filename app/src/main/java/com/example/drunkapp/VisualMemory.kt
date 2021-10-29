@@ -28,6 +28,7 @@ class VisualMemory : AppCompatActivity() {
     var  newarray = List(3) { Random.nextInt(0, 5) }.toMutableList()
     private val TAG = "MyActivity"
     var flag = false
+    var Incorrect_taps = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -128,6 +129,7 @@ class VisualMemory : AppCompatActivity() {
                 if (b != null) {
                     intent.putExtras(b)
                 }
+                intent.putExtra("VisualIncorrect", 5)
                 startActivity(intent)
             }
         }, 16000)
@@ -173,9 +175,11 @@ class VisualMemory : AppCompatActivity() {
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
                     }
                     else{
+                        Incorrect_taps++
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
@@ -211,9 +215,11 @@ class VisualMemory : AppCompatActivity() {
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
                     }
                     else{
+                        Incorrect_taps++
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
@@ -246,9 +252,11 @@ class VisualMemory : AppCompatActivity() {
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
                     }
                     else{
+                        Incorrect_taps++
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
@@ -281,9 +289,11 @@ class VisualMemory : AppCompatActivity() {
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
                     }
                     else{
+                        Incorrect_taps++
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
@@ -311,6 +321,7 @@ class VisualMemory : AppCompatActivity() {
                     img3.isVisible = true
                     newarray[2] = 4
                     if(tim ==newarray){
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
@@ -318,6 +329,7 @@ class VisualMemory : AppCompatActivity() {
                         startActivity(intent)
                     }
                     else{
+                        Incorrect_taps++
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))
@@ -346,6 +358,7 @@ class VisualMemory : AppCompatActivity() {
                     img3.isVisible = true
                     newarray[2] = 5
                     if(tim ==newarray){
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         textView.text = getString(R.string.results_vmt)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
@@ -353,6 +366,7 @@ class VisualMemory : AppCompatActivity() {
                         startActivity(intent)
                     }
                     else{
+                        Incorrect_taps++
                         textView.text = getString(R.string.results_vmt0)
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.red))

@@ -19,12 +19,13 @@ class UserHistory : AppCompatActivity() {
         val userscreentapcorrect = data.getString("userscreentapcorrect", "NULL")
         val usersubstitutionaccuracy = data.getString("usersubstitutionaccuracy", "NULL")
         val usersubstitutioncorrect = data.getString("usersubstitutioncorrect", "NULL")
+        val uservisualcorrect = data.getString("uservisualcorrect", "NULL")
 
         His.setText("User reaction test : $reaction \n" +
                 "userscreentapaccuracy $userscreentapaccuracy \n" +
                 "userscreentapcorrect : $userscreentapcorrect \n" +
                 "usersubstitutionaccuracy: $usersubstitutionaccuracy \n" +
-                "usersubstitutioncorrect: $usersubstitutioncorrect")
-
+                "usersubstitutioncorrect: $usersubstitutioncorrect" +
+                "Visual Memory accuracy: $usersubstitutioncorrect\"")
     }
 }

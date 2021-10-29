@@ -23,6 +23,8 @@ class Results : AppCompatActivity() {
         val screentapcorrect = b?.getInt("screentapcorrect").toString()
         val substitutionaccuracy = b?.getString("substitutionaccuracy").toString()
         val substitutioncorrect = b?.getInt("substitutioncorrect").toString()
+        val visualincorrect = b?.getInt("VisualIncorrect").toString()
+
         reactionresult.setText("$reaction ms")
         screentapresult.setText("Correct: $screentapcorrect Accuracy: $screentapaccuracy %")
         codesubresult.setText("Correct: $substitutioncorrect")
@@ -36,6 +38,7 @@ class Results : AppCompatActivity() {
             editor.putString("userscreentapcorrect", screentapcorrect)
             editor.putString("usersubstitutionaccuracy", substitutionaccuracy)
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
+            editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
 
         }
@@ -47,6 +50,7 @@ class Results : AppCompatActivity() {
             editor.putString("userscreentapcorrect", screentapcorrect)
             editor.putString("usersubstitutionaccuracy", substitutionaccuracy)
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
+            editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
 
         }
