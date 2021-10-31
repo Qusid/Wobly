@@ -21,8 +21,10 @@ class Results : AppCompatActivity() {
         val reaction = b?.getLong("reaction").toString()
         val screentapaccuracy = b?.getInt("screentapaccuracy").toString()
         val screentapcorrect = b?.getInt("screentapcorrect").toString()
-        val substitutionaccuracy = b?.getString("substitutionaccuracy").toString()
+        val substitutionaccuracy = b?.getInt("substitutionaccuracy").toString()
         val substitutioncorrect = b?.getInt("substitutioncorrect").toString()
+        val visualincorrect = b?.getInt("VisualIncorrect").toString()
+
         reactionresult.setText("$reaction ms")
         screentapresult.setText("Correct: $screentapcorrect Accuracy: $screentapaccuracy %")
         codesubresult.setText("Correct: $substitutioncorrect")
@@ -36,6 +38,7 @@ class Results : AppCompatActivity() {
             editor.putString("userscreentapcorrect", screentapcorrect)
             editor.putString("usersubstitutionaccuracy", substitutionaccuracy)
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
+            editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
 
         }
@@ -47,6 +50,7 @@ class Results : AppCompatActivity() {
             editor.putString("userscreentapcorrect", screentapcorrect)
             editor.putString("usersubstitutionaccuracy", substitutionaccuracy)
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
+            editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
 
         }
@@ -59,5 +63,6 @@ class Results : AppCompatActivity() {
     fun HomeIntent(view: View?) {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }

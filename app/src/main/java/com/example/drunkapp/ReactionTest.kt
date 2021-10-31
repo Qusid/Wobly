@@ -86,6 +86,7 @@ class ReactionTest : AppCompatActivity() {
                     }
                     intent.putExtra("reaction", reaction)
                     startActivity(intent)
+                    finish()
                 }, 2000)
 
             }
