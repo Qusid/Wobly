@@ -25,7 +25,7 @@ class UserHistory : AppCompatActivity() {
                 "userscreentapaccuracy $userscreentapaccuracy \n" +
                 "userscreentapcorrect : $userscreentapcorrect \n" +
                 "usersubstitutionaccuracy: $usersubstitutionaccuracy \n" +
-                "usersubstitutioncorrect: $usersubstitutioncorrect" +
-                "Visual Memory accuracy: $usersubstitutioncorrect\"")
+                "usersubstitutioncorrect: $usersubstitutioncorrect\n" +
+                "Visual Memory accuracy: $uservisualcorrect")
     }
 }

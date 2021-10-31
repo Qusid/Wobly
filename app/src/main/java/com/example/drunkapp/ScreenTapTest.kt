@@ -183,6 +183,7 @@ class ScreenTapTest : AppCompatActivity() {
             intent.putExtra("screentapcorrect", correct)
             intent.putExtra("screentapaccuracy", accuracy)
             startActivity(intent)
+            finish()
         }, 16000)
     }
 }

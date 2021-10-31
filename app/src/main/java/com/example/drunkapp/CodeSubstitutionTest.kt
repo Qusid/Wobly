@@ -185,17 +185,19 @@ class CodeSubstitutionTest : AppCompatActivity() {
             num7.setOnClickListener(null)
             num8.setOnClickListener(null)
             num9.setOnClickListener(null)
-            val accuracy = (correct * 100 / 10)
-            text.setText("Correct = $accuracy%")
+            var accuracy = (correct * 100 / 10)
+            text.setText("Accuracy = $accuracy%")
             val intent = Intent(this, Results::class.java)
             val b = getIntent().extras
             if (b != null) {
                 intent.putExtras(b)
             }
+
             intent.putExtra("substitutioncorrect", correct)
             intent.putExtra("substitutionaccuracy", accuracy)
             text.setTextSize(14F)
             startActivity(intent)
+            finish()
         }, 20000)
     }
 }

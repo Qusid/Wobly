@@ -131,6 +131,7 @@ class VisualMemory : AppCompatActivity() {
                 }
                 intent.putExtra("VisualIncorrect", 5)
                 startActivity(intent)
+                finish()
             }
         }, 16000)
 
@@ -177,6 +178,7 @@ class VisualMemory : AppCompatActivity() {
                         flag = true
                         intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
+                        finish()
                     }
                     else{
                         Incorrect_taps++
@@ -217,6 +219,7 @@ class VisualMemory : AppCompatActivity() {
                         flag = true
                         intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
+                        finish()
                     }
                     else{
                         Incorrect_taps++
@@ -254,6 +257,7 @@ class VisualMemory : AppCompatActivity() {
                         flag = true
                         intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
+                        finish()
                     }
                     else{
                         Incorrect_taps++
@@ -291,6 +295,7 @@ class VisualMemory : AppCompatActivity() {
                         flag = true
                         intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
+                        finish()
                     }
                     else{
                         Incorrect_taps++
@@ -327,6 +332,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
                         startActivity(intent)
+                        finish()
                     }
                     else{
                         Incorrect_taps++
@@ -364,6 +370,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
                         startActivity(intent)
+                        finish()
                     }
                     else{
                         Incorrect_taps++
