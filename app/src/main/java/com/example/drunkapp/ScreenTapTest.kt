@@ -166,7 +166,10 @@ class ScreenTapTest : AppCompatActivity() {
             }
         }, 5000)
         handler.postDelayed({
-            accuracy = (correct * 100/taps)
+            if(taps != 0)
+                accuracy = (correct * 100 / taps)
+            else
+                accuracy = 0
             textview.setText("Correct Taps: $correct   Accuracry: $accuracy%")
             textview.setTextColor(resources.getColor(R.color.black))
             yellowcircle.setOnClickListener(null)

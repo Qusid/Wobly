@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ImpairCheck</string>
+    <string name="app_name">Wobly</string>
     <string name="ImageDescription">remove error</string>
     <string name="Taketest">Take test</string>
     <!-- Preference Titles -->
@@ -47,6 +47,7 @@
     <string name="reactiontest">Reaction Test</string>
     <string name="screentaptest">Screen Tap Test</string>
     <string name="codesubstitution">Code Substitution Test</string>
+    <string name="visualmemotest">Visual Memory Test</string>
     <string name="result">Results</string>
     <string name="walktest">Walking Test</string>
 </resources>
