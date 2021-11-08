@@ -52,6 +52,8 @@ class ReactionTest : AppCompatActivity() {
         var textview = findViewById(R.id.reactiontext) as TextView
         var color = "purple"
         val tim = Random.nextLong(5000, 8000)
+        var stoptime: Long = 0
+        var reaction: Long = 0
         //Thread.sleep(tim)
         var handler = Handler()
         handler.postDelayed({
@@ -72,8 +74,8 @@ class ReactionTest : AppCompatActivity() {
                         R.color.white
                     )
                 )
-                val stoptime = System.nanoTime()
-                var reaction = stoptime - starttime
+                stoptime = System.nanoTime()
+                reaction = stoptime - starttime
                 reaction /= 1000000
                 colorbox.setText("$reaction ms")
                 colorbox.setTextColor(R.color.black)
@@ -84,6 +86,8 @@ class ReactionTest : AppCompatActivity() {
                     if (b != null) {
                         intent.putExtras(b)
                     }
+                    if(reaction == 0L)
+                        reaction = 10000
                     intent.putExtra("reaction", reaction)
                     startActivity(intent)
                     finish()
@@ -91,6 +95,19 @@ class ReactionTest : AppCompatActivity() {
 
             }
         }
+        handler.postDelayed({
+            if(reaction == 0L) {
+                val intent = Intent(this, ScreenTapTest::class.java)
+                val b = getIntent().extras
+                if (b != null) {
+                    intent.putExtras(b)
+                }
+                reaction = 10000
+                intent.putExtra("reaction", reaction)
+                startActivity(intent)
+                finish()
+            }
+        }, 10000)
     }
 }
 

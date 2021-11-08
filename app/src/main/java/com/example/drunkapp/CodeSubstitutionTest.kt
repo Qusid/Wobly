@@ -102,78 +102,98 @@ class CodeSubstitutionTest : AppCompatActivity() {
             code9.setText(arr[randarr[9]].toString())
             code9.setTextColor(getResources().getColor(R.color.white))
             text.setText(arr[randarr[numrand[count]]].toString())
-            count++
         }, 5000)
         num0.setOnClickListener {
             if (code0.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num1.setOnClickListener {
             if (code1.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num2.setOnClickListener {
             if (code2.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num3.setOnClickListener {
             if (code3.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num4.setOnClickListener {
             if (code4.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num5.setOnClickListener {
             if (code5.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num6.setOnClickListener {
             if (code6.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num7.setOnClickListener {
             if (code7.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num8.setOnClickListener {
             if (code8.text == text.text) {
-                count++
+                if(count < 9){count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
         num9.setOnClickListener {
             if (code9.text == text.text) {
-                count++
+                if(count < 9) {count++}
                 correct++
                 text.setText(arr[randarr[numrand[count]]].toString())
             }
+            if(correct == 10)
+                text.setText("")
         }
+
         handler.postDelayed({
             num0.setOnClickListener(null)
             num1.setOnClickListener(null)
@@ -185,8 +205,7 @@ class CodeSubstitutionTest : AppCompatActivity() {
             num7.setOnClickListener(null)
             num8.setOnClickListener(null)
             num9.setOnClickListener(null)
-            var accuracy = (correct * 100 / 10)
-            text.setText("Accuracy = $accuracy%")
+            text.setText("Correct = $correct")
             val intent = Intent(this, Results::class.java)
             val b = getIntent().extras
             if (b != null) {
@@ -194,7 +213,6 @@ class CodeSubstitutionTest : AppCompatActivity() {
             }
 
             intent.putExtra("substitutioncorrect", correct)
-            intent.putExtra("substitutionaccuracy", accuracy)
             text.setTextSize(14F)
             startActivity(intent)
             finish()

@@ -17,14 +17,12 @@ class UserHistory : AppCompatActivity() {
         val reaction = data.getString("userreaction", "NULL")
         val userscreentapaccuracy = data.getString("userscreentapaccuracy", "NULL")
         val userscreentapcorrect = data.getString("userscreentapcorrect", "NULL")
-        val usersubstitutionaccuracy = data.getString("usersubstitutionaccuracy", "NULL")
         val usersubstitutioncorrect = data.getString("usersubstitutioncorrect", "NULL")
         val uservisualcorrect = data.getString("uservisualcorrect", "NULL")
 
         His.setText("User reaction test : $reaction \n" +
                 "userscreentapaccuracy $userscreentapaccuracy \n" +
                 "userscreentapcorrect : $userscreentapcorrect \n" +
-                "usersubstitutionaccuracy: $usersubstitutionaccuracy \n" +
                 "usersubstitutioncorrect: $usersubstitutioncorrect\n" +
                 "Visual Memory accuracy: $uservisualcorrect")
     }

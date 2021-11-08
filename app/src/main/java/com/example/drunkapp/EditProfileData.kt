@@ -66,5 +66,6 @@ class EditProfileData : AppCompatActivity() {
 
         val intent = Intent(this, UserSetUp::class.java)
         startActivity(intent)
+        finish()
     }
 }

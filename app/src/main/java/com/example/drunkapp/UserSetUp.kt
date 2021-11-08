@@ -35,5 +35,6 @@ class UserSetUp : AppCompatActivity() {
     fun EditPRofile(view: View?){
         val intent = Intent(this, EditProfileData::class.java)
         startActivity(intent)
+        finish()
     }
 }

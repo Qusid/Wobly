@@ -16,19 +16,19 @@ class Results : AppCompatActivity() {
         val reactionresult = findViewById(R.id.reactionresult) as TextView
         val screentapresult = findViewById(R.id.screentapresult) as TextView
         val codesubresult = findViewById(R.id.codesubresult) as TextView
+        val visualtest = findViewById(R.id.visualresult) as TextView
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         val b = getIntent().extras
         val reaction = b?.getLong("reaction").toString()
         val screentapaccuracy = b?.getInt("screentapaccuracy").toString()
         val screentapcorrect = b?.getInt("screentapcorrect").toString()
-        val substitutionaccuracy = b?.getInt("substitutionaccuracy").toString()
         val substitutioncorrect = b?.getInt("substitutioncorrect").toString()
         val visualincorrect = b?.getInt("VisualIncorrect").toString()
 
         reactionresult.setText("$reaction ms")
         screentapresult.setText("Correct: $screentapcorrect Accuracy: $screentapaccuracy %")
         codesubresult.setText("Correct: $substitutioncorrect")
-
+        visualtest.setText("Incorrect: $visualincorrect")
 
         if(b?.getString("TestType") == "Impair"){
             val data = applicationContext.getSharedPreferences("LastTest", 0)
@@ -36,7 +36,6 @@ class Results : AppCompatActivity() {
             editor.putString("userreaction", reaction)
             editor.putString("userscreentapaccuracy", screentapaccuracy)
             editor.putString("userscreentapcorrect", screentapcorrect)
-            editor.putString("usersubstitutionaccuracy", substitutionaccuracy)
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
             editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
@@ -48,7 +47,6 @@ class Results : AppCompatActivity() {
             editor.putString("userreaction", reaction)
             editor.putString("userscreentapaccuracy", screentapaccuracy)
             editor.putString("userscreentapcorrect", screentapcorrect)
-            editor.putString("usersubstitutionaccuracy", substitutionaccuracy)
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
             editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
