@@ -20,6 +20,7 @@ import kotlin.random.Random
 
 class ReactionTest : AppCompatActivity() {
     @SuppressLint("ResourceAsColor")
+    val handler = Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reaction_test)
@@ -55,7 +56,7 @@ class ReactionTest : AppCompatActivity() {
         var stoptime: Long = 0
         var reaction: Long = 0
         //Thread.sleep(tim)
-        var handler = Handler()
+
         handler.postDelayed({
             colorbox.setBackgroundTintList(
                 ContextCompat.getColorStateList(
@@ -108,6 +109,14 @@ class ReactionTest : AppCompatActivity() {
                 finish()
             }
         }, 10000)
+    }
+    override fun onBackPressed() {
+        this.finish()
+        super.onBackPressed()
+    }
+    override fun onPause() {
+        handler.removeCallbacksAndMessages(null);
+        super.onPause()
     }
 }
 
