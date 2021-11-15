@@ -34,8 +34,6 @@ class Results : AppCompatActivity() {
         codesubresult.setText("Correct: $substitutioncorrect")
         visualtest.setText("Incorrect: $visualincorrect")
 
-        pres.isVisible = true
-        pres.setProgress(50)
 
 
         if(b?.getString("TestType") == "Impair"){
@@ -53,6 +51,15 @@ class Results : AppCompatActivity() {
             pres.isVisible = true
             pres.isIndeterminate = false
             pres.setProgress(total_diff)
+            if(total_diff < 30){
+                pres.setBackgroundColor(resources.getColor(R.color.green))
+            }
+            else if(total_diff < 60){
+                pres.setBackgroundColor(resources.getColor(R.color.yellow))
+            }
+            else{
+                pres.setBackgroundColor(resources.getColor(R.color.red))
+            }
 
 
 
@@ -104,6 +111,7 @@ class Results : AppCompatActivity() {
         val oguservisualcorrectdiff = nvisualincorrect?.let { oguservisualcorrect?.minus(it) }?.let { Math.abs(it.toInt()) }
 
         return ogreactiondiff!! + oguserscreentapaccuracydiff!! + oguserscreentapcorrectdiff!! + ogusersubstitutioncorrectdiff!! + oguservisualcorrectdiff!!
+
 
     }
 }
