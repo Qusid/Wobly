@@ -15,6 +15,7 @@ import java.text.NumberFormat
 import kotlin.random.Random
 
 class CodeSubstitutionTest : AppCompatActivity() {
+    val handler = Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_code_substitution_test)
@@ -69,7 +70,6 @@ class CodeSubstitutionTest : AppCompatActivity() {
         var code7 = findViewById(R.id.code7) as Button
         var code8 = findViewById(R.id.code8) as Button
         var code9 = findViewById(R.id.code9) as Button
-        val handler = Handler()
         var randarr = intArrayOf(
             0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
             14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
@@ -217,5 +217,13 @@ class CodeSubstitutionTest : AppCompatActivity() {
             startActivity(intent)
             finish()
         }, 20000)
+    }
+    override fun onBackPressed() {
+        this.finish()
+        super.onBackPressed()
+    }
+    override fun onPause() {
+        handler.removeCallbacksAndMessages(null);
+        super.onPause()
     }
 }

@@ -16,6 +16,7 @@ import java.text.NumberFormat
 import kotlin.random.Random
 
 class ScreenTapTest : AppCompatActivity() {
+    val handler = Handler()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_screen_tap_test)
@@ -188,5 +189,9 @@ class ScreenTapTest : AppCompatActivity() {
             startActivity(intent)
             finish()
         }, 16000)
+    }
+    override fun onPause() {
+        handler.removeCallbacksAndMessages(null);
+        super.onPause()
     }
 }
