@@ -50,4 +50,5 @@
     <string name="visualmemotest">Visual Memory Test</string>
     <string name="result">Results</string>
     <string name="walktest">Walking Test</string>
+    <string name="walkinstruct">Please start walking after the countdown (Hold your phone in front of you in your right hand as you normally would)</string>
 </resources>
