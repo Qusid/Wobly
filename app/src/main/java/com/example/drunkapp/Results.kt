@@ -46,7 +46,9 @@ class Results : AppCompatActivity() {
             editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
 
-           var total_diff = pointdiff() * 2
+
+           val total_diff = pointdiff() * 2
+
             testres.setText("Total Diffrence in your points was  $total_diff")
             pres.isVisible = true
             pres.isIndeterminate = false
