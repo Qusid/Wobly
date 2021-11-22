@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     tools:context=".UserSetUp">
 
     <TextView
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="244dp"
         android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:text="Siddhant"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -24,7 +27,9 @@
         android:layout_marginTop="32dp"
         android:text="807 561 7854"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/trus1ofuser"
@@ -34,7 +39,9 @@
         android:layout_marginTop="28dp"
         android:text="807 561 8990"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/ageofuser"
@@ -44,7 +51,9 @@
         android:layout_marginTop="28dp"
         android:text="21"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView14"
@@ -54,7 +63,9 @@
         android:layout_marginTop="32dp"
         android:text="Trusted Contact 2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView13"
@@ -64,7 +75,9 @@
         android:layout_marginTop="28dp"
         android:text="Trusted Contact 1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView12"
@@ -74,7 +87,9 @@
         android:layout_marginTop="28dp"
         android:text="Age"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -84,7 +99,9 @@
         android:layout_marginTop="16dp"
         android:text="User Set Up test"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView8"
@@ -94,7 +111,9 @@
         android:layout_marginTop="24dp"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/SaveButton"
@@ -105,6 +124,8 @@
         android:onClick="EditPRofile"
         android:text="Edit Profile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

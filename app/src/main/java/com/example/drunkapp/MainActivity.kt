@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         //()
     }
 
-    fun UserTestIntent(view: View?) {
+    fun UserProfileIntent(view: View?) {
         val intent = Intent(this, UserSetUp::class.java)
         startActivity(intent)
         //finish()

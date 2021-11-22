@@ -85,7 +85,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/walking" />
+                    android:src="@drawable/mediumwalk" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
             android:layout_marginBottom="8dp"
             android:clickable="true"
             android:focusable="true"
-            android:onClick="UserHistoryIntent"
+            android:onClick="UserProfileIntent"
             app:cardBackgroundColor="#112D43"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp">

@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:background="#33a1fd"
-    android:paddingBottom="64dp"
+    android:paddingBottom="58dp"
     android:scrollbars="vertical"
     tools:context=".Drunktest">
 
@@ -48,7 +48,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/Taketest"
+                    android:text="Visual Test"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="18dp"
@@ -85,7 +85,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/walking" />
+                    android:src="@drawable/mediumwalk" />
 
                 <TextView
                     android:layout_width="wrap_content"

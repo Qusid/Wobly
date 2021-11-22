@@ -15,10 +15,6 @@ class Results : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results)
-        val reactionresult = findViewById(R.id.reactionresult) as TextView
-        val screentapresult = findViewById(R.id.screentapresult) as TextView
-        val codesubresult = findViewById(R.id.codesubresult) as TextView
-        val visualtest = findViewById(R.id.visualresult) as TextView
         val testres = findViewById(R.id.Resulttext) as TextView
         val pres = findViewById(R.id.progressBar) as ProgressBar
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -29,10 +25,6 @@ class Results : AppCompatActivity() {
         val substitutioncorrect = b?.getInt("substitutioncorrect").toString()
         val visualincorrect = b?.getInt("VisualIncorrect").toString()
 
-        reactionresult.setText("$reaction ms")
-        screentapresult.setText("Correct: $screentapcorrect Accuracy: $screentapaccuracy %")
-        codesubresult.setText("Correct: $substitutioncorrect")
-        visualtest.setText("Incorrect: $visualincorrect")
 
 
 
@@ -49,19 +41,22 @@ class Results : AppCompatActivity() {
 
            val total_diff = pointdiff() * 2
 
-            testres.setText("Total Diffrence in your points was  $total_diff")
+
             pres.isVisible = true
             pres.isIndeterminate = false
             pres.setProgress(total_diff)
             if(total_diff < 30){
                 pres.setBackgroundColor(resources.getColor(R.color.green))
+                testres.setText("Your Visual impairment was low")
             }
             else if(total_diff < 60){
 
                 pres.setBackgroundColor(resources.getColor(R.color.yellow))
+                testres.setText("Your Visual impairment was Above Average")
             }
             else{
                 pres.setBackgroundColor(resources.getColor(R.color.red))
+                testres.setText("Your Visual impairment was Very High")
             }
 
 
@@ -78,6 +73,8 @@ class Results : AppCompatActivity() {
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
             editor.putString("uservisualcorrect", visualincorrect)
             editor.apply()
+
+            testres.setText("Your Setup was complete")
 
         }
 
