@@ -129,7 +129,7 @@ class VisualMemory : AppCompatActivity() {
                 if (b != null) {
                     intent.putExtras(b)
                 }
-                intent.putExtra("VisualIncorrect", 5)
+                intent.putExtra("VisualIncorrect", 15)
                 startActivity(intent)
                 finish()
             }
@@ -331,6 +331,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
                         finish()
                     }
@@ -369,6 +370,7 @@ class VisualMemory : AppCompatActivity() {
                         textView.isVisible = true
                         textView.setTextColor(resources.getColor(R.color.green))
                         flag = true
+                        intent.putExtra("VisualIncorrect", Incorrect_taps)
                         startActivity(intent)
                         finish()
                     }
