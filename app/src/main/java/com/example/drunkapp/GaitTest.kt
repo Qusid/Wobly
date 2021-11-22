@@ -7,6 +7,7 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.media.Image
 import android.net.Uri
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,7 @@ import java.io.File
 import java.io.FileWriter
 import java.io.IOException
 import android.util.TypedValue
+import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.core.content.FileProvider
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
@@ -32,7 +34,7 @@ class GaitTest : AppCompatActivity(), SensorEventListener {
     private lateinit var gyroscope3 : TextView
     private lateinit var accelerometer1 : TextView
     private lateinit var accelerometer2 : TextView
-    private lateinit var accelerometer3 : TextView
+    private lateinit var imageview : ImageView
     private lateinit var sensorManager : SensorManager
     private var stoptime = 0L
     private var starttime = 0L
@@ -51,7 +53,8 @@ class GaitTest : AppCompatActivity(), SensorEventListener {
         gyroscope3 = findViewById(R.id.gyroscope3) as TextView
         accelerometer1 = findViewById(R.id.accelerometer1) as TextView
         accelerometer2 = findViewById(R.id.accelerometer2) as TextView
-        accelerometer3 = findViewById(R.id.accelerometer3) as TextView
+        imageview = findViewById(R.id.imageView) as ImageView
+
         object : CountDownTimer(5000, 1000) {
             @SuppressLint("SetTextI18n")
             override fun onTick(millisUntilFinished: Long) {
@@ -124,7 +127,6 @@ class GaitTest : AppCompatActivity(), SensorEventListener {
                 gyroscope3.setText("Your setup is complete. You may go back.")
                 accelerometer1.setText("")
                 accelerometer2.setText("")
-                accelerometer3.setText("")
             }
             else if(testtype == "Impair") {
                 if (File(path, filename1).exists() && File(path, filename2).exists()) {
@@ -273,6 +275,7 @@ class GaitTest : AppCompatActivity(), SensorEventListener {
                             gyroscope3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
                             gyroscope3.setTextColor(resources.getColor(R.color.green))
                             gyroscope3.setBackgroundColor(resources.getColor(R.color.black))
+                            imageview.setImageDrawable(resources.getDrawable(R.drawable.standing))
                         }
                         else if(peravg > 30 && peravg < 50){
                             gyroscope2.setText("Your walking pattern was a little different.")
@@ -280,6 +283,7 @@ class GaitTest : AppCompatActivity(), SensorEventListener {
                             gyroscope3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
                             gyroscope3.setTextColor(resources.getColor(R.color.yellow))
                             gyroscope3.setBackgroundColor(resources.getColor(R.color.black))
+                            imageview.setImageDrawable(resources.getDrawable(R.drawable.mediumwalk))
                         }
                         else{
                             gyroscope2.setText("Your walking pattern was significantly irregular.")
@@ -287,18 +291,18 @@ class GaitTest : AppCompatActivity(), SensorEventListener {
                             gyroscope3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
                             gyroscope3.setTextColor(resources.getColor(R.color.red))
                             gyroscope3.setBackgroundColor(resources.getColor(R.color.black))
+                            imageview.setImageDrawable(resources.getDrawable(R.drawable.falling))
+
                         }
 
                     }
                     accelerometer1.setText("")
                     accelerometer2.setText("")
-                    accelerometer3.setText("")
                 }
                else{
                    gyroscope3.setText("Setup not completed. Please finish the setup test in settings first.")
                     accelerometer1.setText("")
                     accelerometer2.setText("")
-                    accelerometer3.setText("")
                 }
                 //val intent = Intent(this, MainActivity::class.java)
                 //startActivity(intent)
