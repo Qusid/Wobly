@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import android.content.SharedPreferences
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.view.View
 import android.widget.ProgressBar
 import androidx.core.view.isVisible
@@ -36,26 +38,25 @@ class Results : AppCompatActivity() {
             editor.putString("userscreentapcorrect", screentapcorrect)
             editor.putString("usersubstitutioncorrect", substitutioncorrect)
             editor.putString("uservisualcorrect", visualincorrect)
+
+            val total_diff = pointdiff() * 2
+            editor.putInt("pointdiff", total_diff)
             editor.apply()
-
-
-           val total_diff = pointdiff() * 2
 
 
             pres.isVisible = true
             pres.isIndeterminate = false
             pres.setProgress(total_diff)
             if(total_diff < 30){
-                pres.setBackgroundColor(resources.getColor(R.color.green))
+                pres.progressTintList = ColorStateList.valueOf(Color.GREEN)
                 testres.setText("Your Visual impairment was low")
             }
             else if(total_diff < 60){
-
-                pres.setBackgroundColor(resources.getColor(R.color.yellow))
+                pres.progressTintList = ColorStateList.valueOf(Color.YELLOW)
                 testres.setText("Your Visual impairment was Above Average")
             }
             else{
-                pres.setBackgroundColor(resources.getColor(R.color.red))
+                pres.progressTintList = ColorStateList.valueOf(Color.RED)
                 testres.setText("Your Visual impairment was Very High")
             }
 

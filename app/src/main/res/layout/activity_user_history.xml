@@ -7,6 +7,22 @@
     android:background="@color/primary"
     tools:context=".UserHistory">
 
+    <ProgressBar
+        android:id="@+id/pres2"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="331dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="548dp"
+        android:indeterminate="false"
+        android:indeterminateBehavior="cycle"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/Historytext"
         android:layout_width="wrap_content"
@@ -18,5 +34,15 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/texty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pres2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
